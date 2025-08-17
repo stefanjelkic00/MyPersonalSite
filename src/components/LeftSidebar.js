@@ -78,8 +78,12 @@ const LeftSidebar = ({ scrollToSection, activeSection }) => {
         <div style={styles.logoSpotlightContainer}>
           <img
             src={process.env.PUBLIC_URL + "/SiteProfile.png"}
-            alt="IT Solutions"
-            style={styles.logo(theme, isMobile)}
+            alt="Stefan Jelkić"
+            style={{
+              ...styles.logo(theme, isMobile),
+              width: isMobile ? "140px" : "180px",
+              height: isMobile ? "140px" : "180px",
+            }}
           />
           <div style={styles.logoSpotlight(theme)} />
         </div>
