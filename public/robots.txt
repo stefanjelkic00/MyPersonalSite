@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ns-code-nest.vercel.app/sitemap.xml
