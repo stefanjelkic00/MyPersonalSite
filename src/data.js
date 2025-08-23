@@ -9,7 +9,7 @@ export const translations = {
     about: "About Me",
     aboutTitle: "About",
     aboutDesc:
-      "I am Stefan Jelkić, a Full-Stack Developer with expertise in React, Spring Boot, and modern web development. I specialize in building robust, scalable web applications - from creating dynamic, responsive front-end interfaces with React and modern JavaScript to developing secure backend services with Spring Boot and RESTful APIs. My technical stack includes JWT authentication, OAuth2 authorization flows, MySQL/PostgreSQL databases, Docker containerization, and Git version control. I have extensive experience working with various technologies including .NET, Node.js, TypeScript, and CSS frameworks like Bootstrap and Tailwind. Currently employed at Bee IT where I work with Salesforce Commerce Cloud (SFCC) and e-commerce solutions, I also pursue independent full-stack projects that allow me to leverage my broader technical expertise. My passion lies in creating complete web solutions that combine clean code, modern architecture, and exceptional user experience. With a degree in Software and Information Technologies from the Faculty of Technical Sciences in Novi Sad, and currently pursuing a master's degree in Engineering Management, I bring both technical excellence and project management skills to deliver high-quality solutions that exceed client expectations.",
+      "I am Stefan Jelkić, a Full-Stack Developer specializing in React, Spring Boot, and modern web development. I build scalable web applications with expertise in JWT authentication, OAuth2, MySQL/PostgreSQL, Docker, and Git. Currently employed at Bee IT working with Salesforce Commerce Cloud, I also pursue independent full-stack projects. With a degree in Software and Information Technologies from FTN Novi Sad and pursuing a master's in Engineering Management, I combine technical excellence with project management skills to deliver high-quality solutions.",
 
     // Technologies section
     technologies: "Technologies",
@@ -67,10 +67,16 @@ export const translations = {
     periodMaster: "10.2024 - Present",
     periodBachelor: "10.2019 - 09.2024",
 
+    // Certificates section
+    certificates: "Certificates",
+    certificatesTitle: "Certificates",
+    certificatesComingSoon: "Coming soon...",
+
     // Navigation
     navAbout: "About",
     navTechnologies: "Technologies",
     navProjects: "Projects & Experience",
+    navCertificates: "Certificates",
 
     // Error handling
     errorTitle: "Something went wrong",
@@ -86,7 +92,7 @@ export const translations = {
     about: "O meni",
     aboutTitle: "O meni",
     aboutDesc:
-      "Ja sam Stefan Jelkić, Full-Stack Developer sa ekspertizom u React, Spring Boot i modernom web razvoju. Specijalizovan sam za izgradnju robusnih, skalabilnih web aplikacija - od kreiranja dinamičkih, responsivnih front-end interfejsa sa React i modernim JavaScript-om do razvoja sigurnih backend servisa sa Spring Boot i RESTful API-jima. Moj tehnički stack uključuje JWT autentifikaciju, OAuth2 autorizacione tokove, MySQL/PostgreSQL baze podataka, Docker kontejnerizaciju i Git verzijsku kontrolu. Imam ekstenzivno iskustvo sa raznim tehnologijama uključujući .NET, Node.js, TypeScript i CSS framework-ove kao što su Bootstrap i Tailwind. Trenutno zaposlen u Bee IT gde radim sa Salesforce Commerce Cloud (SFCC) i e-commerce rešenjima, takođe radim na nezavisnim full-stack projektima koji mi omogućavaju da iskoristim svoju širu tehničku ekspertizu. Moja strast leži u kreiranju kompletnih web rešenja koja kombinuju čist kod, modernu arhitekturu i izuzetno korisničko iskustvo. Sa diplomom iz Softverskih i informacionih tehnologija sa Fakulteta tehničkih nauka u Novom Sadu, i trenutno pohađajući master studije iz Inženjerskog menadžmenta, donosim i tehničku izvrsnost i veštine upravljanja projektima kako bih isporučio visokokvalitetna rešenja koja prevazilaze očekivanja klijenata.",
+      "Ja sam Stefan Jelkić, Full-Stack Developer specijalizovan za React, Spring Boot i moderan web razvoj. Gradim skalabilne web aplikacije sa ekspertizom u JWT autentifikaciji, OAuth2, MySQL/PostgreSQL, Docker i Git tehnologijama. Trenutno zaposlen u Bee IT gde radim sa Salesforce Commerce Cloud, takođe radim na nezavisnim full-stack projektima. Sa diplomom iz Softverskih i informacionih tehnologija sa FTN-a u Novom Sadu i master studijama iz Inženjerskog menadžmenta, kombinujem tehničku izvrsnost sa veštinama upravljanja projektima kako bih isporučio visokokvalitetna rešenja.",
 
     // Technologies section
     technologies: "Tehnologije",
@@ -144,10 +150,16 @@ export const translations = {
     periodMaster: "10.2024 - Trenutno",
     periodBachelor: "10.2019 - 09.2024",
 
+    // Certificates section
+    certificates: "Sertifikati",
+    certificatesTitle: "Sertifikati",
+    certificatesComingSoon: "Uskoro dolazi...",
+
     // Navigation
     navAbout: "O meni",
     navTechnologies: "Tehnologije",
     navProjects: "Projekti i iskustvo",
+    navCertificates: "Sertifikati",
 
     // Error handling
     errorTitle: "Nešto je pošlo naopako",
@@ -171,7 +183,6 @@ export const techStack = [
   "React Native",
   "Next.js",
   "Node.js",
-  "Angular",
   "HTML",
   "HTML5",
   "CSS",
@@ -180,7 +191,6 @@ export const techStack = [
   "MySQL",
   "MSSQL",
   "Elasticsearch",
-  "Swing",
   "Docker",
   "Git",
   "GitHub",
@@ -385,4 +395,5 @@ export const navItems = [
   { id: "about", label: "navAbout" },
   { id: "technologies", label: "navTechnologies" },
   { id: "projects", label: "navProjects" },
+  { id: "certificates", label: "navCertificates" },
 ];

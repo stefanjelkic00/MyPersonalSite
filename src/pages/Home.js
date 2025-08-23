@@ -8,6 +8,7 @@ import useIsMobile from "../hooks/useIsMobile";
 import About from "../components/About";
 import Technologies from "../components/Technologies";
 import Projects from "../components/Projects";
+import Certificates from "../components/Certificates"; // DODATO
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -24,6 +25,8 @@ const Home = () => {
         return;
       }
 
+      console.log("Found sections:", Array.from(sections).map(s => s.id)); // Debug log
+
       const observer = new IntersectionObserver(
         (entries) => {
           let mostVisibleSection = null;
@@ -37,13 +40,13 @@ const Home = () => {
           });
 
           if (mostVisibleSection) {
-            console.log(mostVisibleSection);
+            console.log("Active section:", mostVisibleSection); // Debug log
             setActiveSection(mostVisibleSection);
           }
         },
         {
-          threshold: [0.1],
-          rootMargin: "-10px 0px -10% 0px",
+          threshold: [0.1, 0.3, 0.5, 0.7, 0.9], // Više threshold vrednosti za bolju detekciju
+          rootMargin: "-100px 0px -100px 0px", // Prilagođeno za bolju detekciju
         }
       );
 
@@ -54,7 +57,8 @@ const Home = () => {
       };
     };
 
-    const timeoutId = setTimeout(setupObserver, 100);
+    // Povećaj timeout da bi bio siguran da su sve komponente učitane
+    const timeoutId = setTimeout(setupObserver, 500);
 
     return () => {
       clearTimeout(timeoutId);
@@ -163,6 +167,7 @@ const Home = () => {
             <About />
             <Technologies />
             <Projects />
+            <Certificates /> {/* DODATO */}
           </Suspense>
         </div>
       </div>
