@@ -136,7 +136,7 @@ export const styles = {
     backgroundColor: theme === "dark" ? "#ffa500" : "#ff6200",
   }),
   socials: (isMobile = false) => ({
-    marginTop: isMobile ? "1rem" : "2rem",
+    marginTop: "0", // PROMENJENO - potpuno uklonjena margina
   }),
   socialIcons: (isMobile = false) => ({
     display: "flex",

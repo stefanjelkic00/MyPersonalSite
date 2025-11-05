@@ -20,7 +20,23 @@ const Certificates = () => {
       >
         <h2 style={styles.heading(theme, isMobile)}>{translations[language].certificatesTitle}</h2>
         <div style={styles.subSection}>
-          <p style={styles.emptyMessage(theme)}>{translations[language].certificatesComingSoon}</p>
+          <motion.img
+            src={process.env.PUBLIC_URL + "/SfccCertificate.png"}
+            alt="SFCC Certificate"
+            style={{
+              width: "100%",
+              maxWidth: "800px",
+              height: "auto",
+              borderRadius: "8px",
+              boxShadow: theme === "dark" 
+                ? "0 4px 12px rgba(0, 0, 0, 0.5)" 
+                : "0 4px 12px rgba(0, 0, 0, 0.1)",
+              margin: "0 auto",
+              display: "block"
+            }}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          />
         </div>
       </motion.div>
     </section>

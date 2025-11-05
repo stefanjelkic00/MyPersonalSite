@@ -8,7 +8,7 @@ import useIsMobile from "../hooks/useIsMobile";
 import About from "../components/About";
 import Technologies from "../components/Technologies";
 import Projects from "../components/Projects";
-import Certificates from "../components/Certificates"; // DODATO
+import Certificates from "../components/Certificates"; 
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -16,7 +16,6 @@ const Home = () => {
   const { language } = useLanguage();
   const isMobile = useIsMobile();
 
-  // IntersectionObserver logika
   useEffect(() => {
     const setupObserver = () => {
       const sections = document.querySelectorAll("section");
@@ -25,7 +24,7 @@ const Home = () => {
         return;
       }
 
-      console.log("Found sections:", Array.from(sections).map(s => s.id)); // Debug log
+      console.log("Found sections:", Array.from(sections).map(s => s.id));
 
       const observer = new IntersectionObserver(
         (entries) => {
@@ -40,13 +39,13 @@ const Home = () => {
           });
 
           if (mostVisibleSection) {
-            console.log("Active section:", mostVisibleSection); // Debug log
+            console.log("Active section:", mostVisibleSection); 
             setActiveSection(mostVisibleSection);
           }
         },
         {
-          threshold: [0.1, 0.3, 0.5, 0.7, 0.9], // Više threshold vrednosti za bolju detekciju
-          rootMargin: "-100px 0px -100px 0px", // Prilagođeno za bolju detekciju
+          threshold: [0.1, 0.3, 0.5, 0.7, 0.9], 
+          rootMargin: "-100px 0px -100px 0px", 
         }
       );
 
@@ -57,7 +56,6 @@ const Home = () => {
       };
     };
 
-    // Povećaj timeout da bi bio siguran da su sve komponente učitane
     const timeoutId = setTimeout(setupObserver, 500);
 
     return () => {
@@ -78,7 +76,6 @@ const Home = () => {
     }
   };
 
-  // Structured data za SEO
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -167,7 +164,7 @@ const Home = () => {
             <About />
             <Technologies />
             <Projects />
-            <Certificates /> {/* DODATO */}
+            <Certificates />
           </Suspense>
         </div>
       </div>

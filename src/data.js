@@ -9,7 +9,7 @@ export const translations = {
     about: "About Me",
     aboutTitle: "About",
     aboutDesc:
-      "I am Stefan Jelkić, a Full-Stack Developer specializing in React, Spring Boot, and modern web development. I build scalable web applications with expertise in JWT authentication, OAuth2, MySQL/PostgreSQL, Docker, and Git. Currently employed at Bee IT working with Salesforce Commerce Cloud, I also pursue independent full-stack projects. With a degree in Software and Information Technologies from FTN Novi Sad and pursuing a master's in Engineering Management, I combine technical excellence with project management skills to deliver high-quality solutions.",
+      "I am Stefan Jelkić, a Full-Stack Developer specializing in Spring Boot, React, and modern web development. I build scalable web applications with Java, React, Next.js, and .NET, implementing secure authentication and authorization systems. I use Git for version control, GitHub for personal projects, and Bitbucket for professional collaboration. Currently employed at Bee IT as a certified Salesforce Commerce Cloud Developer, I am also pursuing my Platform Developer 1 certification to transition into CRM development. With a degree in Software and Information Technologies from FTN Novi Sad and pursuing a master's in Engineering Management, I combine technical excellence with project management skills to deliver high-quality solutions.",
 
     // Technologies section
     technologies: "Technologies",
@@ -39,11 +39,11 @@ export const translations = {
       "Professional training focused on client communication and contribution to internal team projects including company planning systems and program development.",
     sfccTrainingTitle: "SFCC Developer Training",
     sfccTrainingDesc:
-      "Completed 3-month intensive Salesforce Commerce Cloud training program with hands-on development tasks in preparation for SFCC certification. Built custom cartridges using ISML templates, implemented SFRA framework features, worked with OCAPI/SCAPI protocols and OAuth2 authorization flows, managed deployments through Business Manager, and developed comprehensive e-commerce solutions.",
+      "Completed 3-month Salesforce Commerce Cloud training program with hands-on development tasks in preparation for SFCC certification. Built custom cartridges using ISML templates, implemented SFRA framework features, worked with OCAPI/SCAPI protocols and OAuth2 authorization flows, managed deployments through Business Manager, and developed comprehensive e-commerce solutions.",
     beeITTitle: "Software Developer at Bee IT",
     beeITDesc:
-      "Currently employed as a Software Developer at Bee IT in Novi Sad. After completing the intensive 3-month SFCC training program, I work on testing and implementing pre-packaged Salesforce solutions for enterprise clients. Actively preparing for both Salesforce Commerce Cloud (SFCC) and Salesforce CRM certifications while contributing to e-commerce projects and solution deployments.",
-    prepackedTitle: "SFCC Pre-packaged Solutions Testing",
+      "Currently employed as a Software Developer at Bee IT in Novi Sad. After completing the 3-month SFCC training program, I work on testing and implementing pre-packaged Salesforce solutions for enterprise clients. As a certified Salesforce Commerce Cloud Developer, I am now preparing for the Platform Developer 1 certification to expand my expertise in the Salesforce ecosystem.",
+    prepackedTitle: "SFCC Pre-packaged Solutions",
     prepackedDesc:
       "Testing and implementing enterprise-level Salesforce Commerce Cloud pre-packaged solutions including Google Lighthouse Score optimization, Marketing Cloud Connector integration, Loyalty and Marketing solutions with Yotpo, Payment gateway integrations with Adyen, SEO structured data implementation, Gift Registry functionality, and Custom Cartridge development. Working with Agile methodology using Jira for task management and ensuring quality delivery of DEPT PACKAGE solutions.",
     
@@ -56,10 +56,10 @@ export const translations = {
       "Studied core software engineering principles, algorithms, data structures, and modern development practices. Specialized in web technologies and enterprise software development. Key areas: Object-Oriented Programming, Web Development (HTML/CSS/JavaScript), Backend Development (Java, Spring Boot), Database Systems (SQL, NoSQL), Software Testing, and DevOps practices. Completed capstone project on Faculty of Technical Sciences Student Service.",
     
     // Project periods
-    periodRevenue: "08.2025 - Present",
-    period1: "07.2025 - 08.2025",
-    period2: "02.2025 - 04.2025",
-    period3: "05.2025 - Present",
+    periodRevenue: "08.2025 - 09.2025",
+    period1: "07.2025 - 11.2025",
+    period2: "05.2025 - 07.2025",
+    period3: "05.2024 - Present",
     period4: "02.2025 - 04.2025",
     period5: "01.2025 - 03.2025",
     period6: "05.2024 - 07.2024",
@@ -92,7 +92,7 @@ export const translations = {
     about: "O meni",
     aboutTitle: "O meni",
     aboutDesc:
-      "Ja sam Stefan Jelkić, Full-Stack Developer specijalizovan za React, Spring Boot i moderan web razvoj. Gradim skalabilne web aplikacije sa ekspertizom u JWT autentifikaciji, OAuth2, MySQL/PostgreSQL, Docker i Git tehnologijama. Trenutno zaposlen u Bee IT gde radim sa Salesforce Commerce Cloud, takođe radim na nezavisnim full-stack projektima. Sa diplomom iz Softverskih i informacionih tehnologija sa FTN-a u Novom Sadu i master studijama iz Inženjerskog menadžmenta, kombinujem tehničku izvrsnost sa veštinama upravljanja projektima kako bih isporučio visokokvalitetna rešenja.",
+      "Ja sam Stefan Jelkić, Full-Stack Developer specijalizovan za Spring Boot, React i moderan web razvoj. Gradim skalabilne web aplikacije koristeći Java, React, Next.js i .NET, implementirajući sigurne sisteme za autentifikaciju i autorizaciju. Koristim Git za kontrolu verzija, GitHub za lične projekte i Bitbucket za profesionalnu saradnju. Trenutno zaposlen u Bee IT kao sertifikovani Salesforce Commerce Cloud Developer, takođe se pripremam za Platform Developer 1 sertifikaciju kako bih prešao u CRM razvoj. Sa diplomom iz Softverskih i informacionih tehnologija sa FTN-a u Novom Sadu i master studijama iz Inženjerskog menadžmenta, kombinujem tehničku izvrsnost sa veštinama upravljanja projektima kako bih isporučio visokokvalitetna rešenja.",
 
     // Technologies section
     technologies: "Tehnologije",
@@ -122,11 +122,11 @@ export const translations = {
       "Profesionalna obuka fokusirana na komunikaciju sa klijentima i doprinos internim timskim projektima uključujući sisteme planiranja kompanije i razvoj programa.",
     sfccTrainingTitle: "SFCC Developer Training",
     sfccTrainingDesc:
-      "Završio sam 3-mesečni intenzivni Salesforce Commerce Cloud program obuke sa praktičnim razvojnim zadacima u pripremi za SFCC sertifikaciju. Razvijao custom cartridges koristeći ISML template-e, implementirao SFRA framework funkcionalnosti, radio sa OCAPI/SCAPI protokolima i OAuth2 autorizacionim tokovima, upravljao deployment-ima kroz Business Manager, i kreirao sveobuhvatna e-commerce rešenja.",
+      "Završio sam 3-mesečni Salesforce Commerce Cloud program obuke sa praktičnim razvojnim zadacima u pripremi za SFCC sertifikaciju. Razvijao custom cartridges koristeći ISML template-e, implementirao SFRA framework funkcionalnosti, radio sa OCAPI/SCAPI protokolima i OAuth2 autorizacionim tokovima, upravljao deployment-ima kroz Business Manager, i kreirao sveobuhvatna e-commerce rešenja.",
     beeITTitle: "Software Developer u Bee IT",
     beeITDesc:
-      "Trenutno zaposlen kao Software Developer u Bee IT u Novom Sadu. Nakon završetka intenzivnog 3-mesečnog SFCC programa obuke, radim na testiranju i implementaciji pre-packaged Salesforce rešenja za enterprise klijente. Aktivno se pripremam za Salesforce Commerce Cloud (SFCC) i Salesforce CRM sertifikacije dok doprinosim e-commerce projektima i deployment-u rešenja.",
-    prepackedTitle: "SFCC Pre-packaged Solutions testiranje",
+      "Trenutno zaposlen kao Software Developer u Bee IT u Novom Sadu. Nakon završetka 3-mesečnog SFCC programa obuke, radim na testiranju i implementaciji pre-packaged Salesforce rešenja za enterprise klijente. Kao sertifikovani Salesforce Commerce Cloud Developer, trenutno se pripremam za Platform Developer 1 sertifikaciju kako bih proširio svoju ekspertizu u Salesforce ekosistemu.",
+    prepackedTitle: "SFCC Pre-packaged Solutions",
     prepackedDesc:
       "Testiranje i implementacija enterprise-level Salesforce Commerce Cloud pre-packaged rešenja uključujući Google Lighthouse Score optimizaciju, Marketing Cloud Connector integraciju, Loyalty i Marketing rešenja sa Yotpo, integracije platnih gateway-a sa Adyen, SEO structured data implementaciju, Gift Registry funkcionalnost, i Custom Cartridge razvoj. Rad sa Agile metodologijom koristeći Jira za upravljanje zadacima i osiguravanje kvalitetne isporuke DEPT PACKAGE rešenja.",
     
@@ -139,9 +139,9 @@ export const translations = {
       "Studirao osnovne principe softverskog inženjerstva, algoritme, strukture podataka i moderne razvojne prakse. Specijalizovan za web tehnologije i razvoj enterprise softvera. Ključne oblasti: Objektno-orijentisano programiranje, Web razvoj (HTML/CSS/JavaScript), Backend razvoj (Java, Spring Boot), Sistemi baza podataka (SQL, NoSQL), Testiranje softvera i DevOps prakse. Završni rad na temu studentske službe FTN-a.",
     
     // Project periods
-    periodRevenue: "08.2025 - Trenutno",
-    period1: "07.2025 - 08.2025",
-    period2: "01.2025 - 03.2025",
+    periodRevenue: "08.2025 - 09.2025",
+    period1: "07.2025 - 11.2025",
+    period2: "05.2025 - 07.2025",
     period3: "05.2024 - Trenutno",
     period4: "02.2025 - 04.2025",
     period5: "08.2024 - 10.2024",
@@ -178,13 +178,10 @@ export const techStack = [
   "C#",
   "JavaScript",
   "TypeScript",
-  "React",
   "React.js",
-  "React Native",
   "Next.js",
   "Node.js",
   "HTML",
-  "HTML5",
   "CSS",
   "Bootstrap",
   "Tailwind",
@@ -195,11 +192,8 @@ export const techStack = [
   "Git",
   "GitHub",
   "Bitbucket",
-  "Jira",
   "Salesforce Commerce Cloud",
-  "Salesforce Revenue Cloud",
   "Google Maps API",
-  "Figma",
 ];
 
 export const stefanProjects = [
@@ -212,7 +206,6 @@ export const stefanProjects = [
       "Salesforce Revenue Cloud",
       "JavaScript",
       "Node.js",
-      "Jira",
       "Git",
       "Bitbucket",
     ],
@@ -227,7 +220,6 @@ export const stefanProjects = [
       "Salesforce Commerce Cloud",
       "JavaScript",
       "Node.js",
-      "Jira",
       "Git",
       "Bitbucket",
     ],
@@ -244,7 +236,6 @@ export const stefanProjects = [
       "Node.js",
       "Git",
       "Bitbucket",
-      "Jira",
     ],
     type: "experience",
     logo: "/BeeItLogo.png",
@@ -259,7 +250,6 @@ export const stefanProjects = [
       "Node.js",
       "Git",
       "Bitbucket",
-      "Jira",
     ],
     type: "experience",
     logo: "/BeeItLogo.png",
@@ -299,7 +289,6 @@ export const stefanProjects = [
       "JavaScript",
       "React.js",
       "HTML",
-      "HTML5",
       "CSS",
       "Bootstrap",
       "MSSQL",
