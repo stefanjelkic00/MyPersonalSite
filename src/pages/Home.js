@@ -8,66 +8,48 @@ import useIsMobile from "../hooks/useIsMobile";
 import About from "../components/About";
 import Technologies from "../components/Technologies";
 import Projects from "../components/Projects";
-import Certificates from "../components/Certificates"; 
+import Certificates from "../components/Certificates";
 
 const Home = () => {
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("about");
   const { theme } = useTheme();
   const { language } = useLanguage();
   const isMobile = useIsMobile();
 
+  // Scroll-based section detection
   useEffect(() => {
-    const setupObserver = () => {
-      const sections = document.querySelectorAll("section");
-      if (sections.length === 0) {
-        console.error("No sections found!");
-        return;
-      }
+    const handleScroll = () => {
+      const sections = ["about", "technologies", "projects", "certificates"];
+      const scrollPosition = window.scrollY + 200; // offset od vrha
 
-      console.log("Found sections:", Array.from(sections).map(s => s.id));
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          let mostVisibleSection = null;
-          let maxRatio = 0;
-
-          entries.forEach((entry) => {
-            if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
-              mostVisibleSection = entry.target.id;
-              maxRatio = entry.intersectionRatio;
-            }
-          });
-
-          if (mostVisibleSection) {
-            console.log("Active section:", mostVisibleSection); 
-            setActiveSection(mostVisibleSection);
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          if (scrollPosition >= sectionTop) {
+            setActiveSection(sections[i]);
+            break;
           }
-        },
-        {
-          threshold: [0.1, 0.3, 0.5, 0.7, 0.9], 
-          rootMargin: "-100px 0px -100px 0px", 
         }
-      );
-
-      sections.forEach((section) => observer.observe(section));
-
-      return () => {
-        sections.forEach((section) => observer.unobserve(section));
-      };
+      }
     };
 
-    const timeoutId = setTimeout(setupObserver, 500);
+    // Pozovi odmah pri učitavanju
+    handleScroll();
 
+    // Dodaj scroll listener
+    window.addEventListener("scroll", handleScroll);
+    
     return () => {
-      clearTimeout(timeoutId);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const offset = 115;
-      const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
+      const offset = 100;
+      const sectionPosition = section.offsetTop;
       window.scrollTo({
         top: sectionPosition - offset,
         behavior: "smooth",
@@ -76,32 +58,25 @@ const Home = () => {
     }
   };
 
+  // Structured data za SEO
   const structuredData = [
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      name: language === "en" ? "NS Code Nest Portfolio" : "Portfolio NS Code Nest",
-      url: "https://ns-code-nest.vercel.app",
+      name: language === "en" ? "Stefan Jelkić Portfolio" : "Portfolio Stefan Jelkić",
+      url: "https://stefanjelkic.com",
       description:
         language === "en"
-          ? "Portfolio of Stefan Jelkic and Nikola Matosic, showcasing full-stack web solutions at NS Code Nest."
-          : "Portfolio Stefana Jelkića i Nikole Matosića, prikazuje full-stack web rešenja NS Code Nest-a.",
+          ? "Portfolio of Stefan Jelkić, showcasing full-stack web development projects and expertise."
+          : "Portfolio Stefana Jelkića, prikazuje full-stack web razvojne projekte i stručnost.",
     },
     {
       "@context": "https://schema.org",
       "@type": "Person",
       name: "Stefan Jelkić",
-      jobTitle: "Web Developer",
-      url: "https://ns-code-nest.vercel.app",
-      sameAs: ["https://www.linkedin.com/in/stefan-jelkic/", "https://github.com/stefanjelkic00"],
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Nikola Matosić",
-      jobTitle: "Web Developer",
-      url: "https://ns-code-nest.vercel.app",
-      sameAs: ["https://github.com/NikolaMatosic00"],
+      jobTitle: "Full-Stack Developer",
+      url: "https://stefanjelkic.com",
+      sameAs: ["https://www.linkedin.com/in/stefanjelkic", "https://github.com/stefanjelkic00"],
     },
   ];
 
@@ -111,50 +86,47 @@ const Home = () => {
         <html lang={language === "en" ? "en" : "sr"} />
         <title>
           {language === "en"
-            ? "NS Code Nest | Stefan & Nikola Portfolio"
-            : "NS Code Nest | Portfolio Stefana i Nikole"}
+            ? "Stefan Jelkić | Full-Stack Developer Portfolio"
+            : "Stefan Jelkić | Full-Stack Developer Portfolio"}
         </title>
         <meta
           name="description"
           content={
             language === "en"
-              ? "Portfolio of Stefan Jelkic and Nikola Matosic, showcasing full-stack web solutions, projects, and expertise in React, Spring Boot, .NET, and more at NS Code Nest."
-              : "Portfolio Stefana Jelkića i Nikole Matosića, prikazuje full-stack web rešenja, projekte i stručnost u React-u, Spring Boot-u, .NET-u i više na NS Code Nest-u."
+              ? "Portfolio of Stefan Jelkić, showcasing full-stack web solutions, projects, and expertise in React, Spring Boot, .NET, Salesforce Commerce Cloud and more."
+              : "Portfolio Stefana Jelkića, prikazuje full-stack web rešenja, projekte i stručnost u React-u, Spring Boot-u, .NET-u, Salesforce Commerce Cloud-u i više."
           }
         />
         <meta
           name="keywords"
-          content="NS Code Nest, web development, React, Spring Boot, .NET, JavaScript, portfolio, Stefan Jelkic, Nikola Matosic, Novi Sad"
+          content="Stefan Jelkić, web development, React, Spring Boot, .NET, JavaScript, portfolio, Salesforce Commerce Cloud, Full-Stack Developer"
         />
-        <meta name="author" content="Stefan Jelkic, Nikola Matosic" />
-        <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
-        <meta property="og:title" content={language === "en" ? "NS Code Nest | Stefan & Nikola Portfolio" : "NS Code Nest | Portfolio Stefana i Nikole"} />
+        <meta name="author" content="Stefan Jelkić" />
+        <meta property="og:title" content={language === "en" ? "Stefan Jelkić | Full-Stack Developer Portfolio" : "Stefan Jelkić | Full-Stack Developer Portfolio"} />
         <meta
           property="og:description"
           content={
             language === "en"
-              ? "Explore the portfolio of Stefan Jelkic and Nikola Matosic, featuring full-stack web development projects at NS Code Nest."
-              : "Istražite portfolio Stefana Jelkića i Nikole Matosića, koji prikazuje full-stack web razvojne projekte na NS Code Nest-u."
+              ? "Explore the portfolio of Stefan Jelkić, featuring full-stack web development projects."
+              : "Istražite portfolio Stefana Jelkića, koji prikazuje full-stack web razvojne projekte."
           }
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ns-code-nest.vercel.app" />
-        <meta property="og:image" content="https://ns-code-nest.vercel.app/images/nscodenest-logo.webp" />
+        <meta property="og:url" content="https://stefanjelkic.com" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content={language === "en" ? "NS Code Nest | Stefan & Nikola Portfolio" : "NS Code Nest | Portfolio Stefana i Nikole"}
+          content={language === "en" ? "Stefan Jelkić | Full-Stack Developer Portfolio" : "Stefan Jelkić | Full-Stack Developer Portfolio"}
         />
         <meta
           name="twitter:description"
           content={
             language === "en"
-              ? "Portfolio of Stefan Jelkic and Nikola Matosic, showcasing full-stack web solutions at NS Code Nest."
-              : "Portfolio Stefana Jelkića i Nikole Matosića, prikazuje full-stack web rešenja na NS Code Nest-u."
+              ? "Portfolio of Stefan Jelkić, showcasing full-stack web solutions."
+              : "Portfolio Stefana Jelkića, prikazuje full-stack web rešenja."
           }
         />
-        <meta name="twitter:image" content="https://ns-code-nest.vercel.app/images/nscodenest-logo.webp" />
-        <link rel="canonical" href="https://ns-code-nest.vercel.app" />
+        <link rel="canonical" href="https://stefanjelkic.com" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       <div style={styles.container(theme, isMobile)}>
